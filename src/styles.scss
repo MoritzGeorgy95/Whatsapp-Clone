@@ -1,0 +1,29 @@
+@use 'colors';
+
+
+
+
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+.mat-mdc-text-field-wrapper {
+    background-color: rgb(39, 52, 67);
+
+
+    mat-label, mat-icon {
+      color: lightgray;
+    }
+  }
+
+
+  .mat-mdc-form-field-subscript-wrapper {
+    display: none;
+  }
