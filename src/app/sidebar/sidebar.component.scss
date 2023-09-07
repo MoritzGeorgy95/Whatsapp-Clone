@@ -1,0 +1,124 @@
+.sidebar-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #111111;
+}
+
+.navbar {
+  padding: 1rem 1.5rem;
+  background-color: rgb(39, 52, 67);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: space-between;
+
+  .radio-wrapper {
+
+    display: flex;
+    gap: .5rem;
+
+    .red {
+      background-color: rgb(225, 4, 4);
+    }
+  
+    .orange {
+      background-color: orange;
+    }
+  
+    .green {
+      background-color: greenyellow;
+    }
+
+    .radio {
+      width: .8rem;
+      height: .8rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      .radio-control {
+        transform: scale(.5);
+        color: white;
+        display: none;
+      }
+    }
+  }
+
+  .icon-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
+    .user-avatar {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+    }
+  
+    .navbar-icon {
+      color: lightgray;
+      cursor: pointer;
+    }
+
+  } 
+
+}
+
+.searchbar {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  .filter {
+    color: white;
+    vertical-align: middle;
+    cursor: pointer
+  }
+}
+
+.convos {
+  display: flex;
+  flex-direction: column;
+
+  .convo {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(39, 52, 67);
+
+    .user-avatar-container {
+      display: flex;
+      gap: 1rem;
+
+      .user-avatar {
+        width: 50px;
+        height: 50px;
+      }
+
+      .user-avatar-text {
+        span {
+            color: lightgray;
+        }
+
+        h3 {
+            margin: 0;
+            color: white;
+            
+        }
+    }
+
+    }
+
+    .time {
+      color: lightgray;
+    }
+
+  }
+
+
+}
+

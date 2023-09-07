@@ -1,0 +1,56 @@
+<div class="chat-container">
+    <div class="navbar">
+        <div class="user-avatar-container">
+            <img src="assets/img/icon_person.png" alt="" class="user-avatar">
+            <div class="user-avatar-text">
+                <h3>Dennis</h3>
+                <span>online</span>
+            </div>
+        </div>
+        <div class="icon-container">
+            <mat-icon>videocam</mat-icon>
+            <mat-icon>call</mat-icon>
+            <mat-icon class="search">search</mat-icon>
+            <mat-icon>keyboard_arrow_down</mat-icon>
+        </div>
+    </div>
+    <div class="chat">
+        <div class="message-container-sent">
+            <div class="message bg-sent">
+                <div class="text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro omnis saepe inventore molestiae ullam odit soluta a neque tempore repellat modi aperiam dolore ipsam, unde tempora excepturi, nostrum fugiat. Voluptatibus eum consectetur, quo suscipit quod reprehenderit, non sequi architecto recusandae rerum distinctio. Debitis non esse aut ea at facilis odio?
+                </div>
+                <div class="time">
+                    15:50
+                </div>
+                
+            </div>
+        </div>
+        <div class="message-container-received">
+            <div class="message bg-received">
+                <div class="text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro omnis saepe inventore molestiae ullam odit soluta a neque tempore repellat modi aperiam dolore ipsam, unde tempora excepturi, nostrum fugiat. Voluptatibus eum consectetur, quo suscipit quod reprehenderit, non sequi architecto recusandae rerum distinctio. Debitis non esse aut ea at facilis odio?
+                </div>
+                <div class="time">
+                    15:50
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="message-bar">
+        <mat-icon>mood</mat-icon>
+        <mat-icon>add</mat-icon>
+        <mat-form-field appearance="outline" style="width: 75%;">
+            <mat-label>Schreibe eine Nachricht</mat-label>
+            <mat-icon matSuffix 
+            (click)="sendMessage()"
+                        *ngIf="message.length > 0">send</mat-icon>
+            <input matInput class="search" (keydown.enter)="sendMessage()"
+            [(ngModel)]="message"
+            />
+          </mat-form-field>
+        <mat-icon >mic</mat-icon>
+    </div>
+</div>

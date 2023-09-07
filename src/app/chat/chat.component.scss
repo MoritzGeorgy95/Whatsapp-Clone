@@ -1,0 +1,116 @@
+
+.chat-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-left: .5px solid rgba($color: #000000, $alpha: .6);
+}
+ 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    position: absolute;
+    background-color: rgb(39, 52, 67);
+    top: 0;
+    right: 0;
+    left: 0;
+
+    .user-avatar-container {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        .user-avatar-text {
+            span {
+                color: white;
+            }
+
+            h3 {
+                margin: 0;
+                color: lightgray;
+            }
+        }
+
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+        }
+
+    }
+
+    .icon-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        mat-icon {
+            color: white;
+        }
+
+        .search {
+        }
+
+    }
+
+} 
+
+.chat {
+    background-image: url('/assets/img/bg.jpeg');
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1rem;
+    gap: 1rem;
+
+    .message-container-sent {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .message-container-received {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .bg-sent {
+        background-color: green;
+    }
+
+    .bg-received {
+        background-color: #111111;
+        color: white;
+    }
+
+    .message {
+        border-radius: .5rem;
+        padding: 1rem;
+        display: flex;
+        max-width: 80%;
+
+        .text {
+            display: flex;
+            align-items: center;
+        }
+
+        .time {
+            display: flex;
+            align-items: flex-end;
+        }
+
+    }
+
+}
+
+.message-bar {
+    display: flex;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    background-color: rgb(39, 52, 67);
+    align-items: center;
+    justify-content: space-between;
+    mat-icon {
+        color: white;
+    }
+}
