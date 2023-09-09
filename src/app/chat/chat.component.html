@@ -15,6 +15,17 @@
         </div>
     </div>
     <div class="chat">
+        <div *ngIf="userService.currentConvo">
+            <div class="message"        
+            *ngFor="let message of userService.currentConvo"
+            [ngClass]="{'bg-sent': message.hasSent, 'bg-received': !message.hasSent}" >
+                <div class="text">
+                    {{message.messageText}}
+                </div>
+            </div>
+        </div>
+        
+
         <div class="message-container-sent">
             <div class="message bg-sent">
                 <div class="text">

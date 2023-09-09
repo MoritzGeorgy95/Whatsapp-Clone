@@ -13,7 +13,9 @@ export class ChatComponent {
 
   message: string= '';
 
+  
+
+
   sendMessage() {
-    this.userService.getUserData()
   }
 }

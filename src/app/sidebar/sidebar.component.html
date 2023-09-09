@@ -32,16 +32,18 @@
     </mat-form-field>
     <mat-icon class="filter">filter_list</mat-icon>
   </div>
-  <div class="convos">
-    <div class="convo">
+  <div class="convos" *ngIf="us.userData">
+    <div class="convo" *ngFor="let contact of us.userData.contacts" (click)="openConvo(contact.convo)">
+      <!-- Render user data here -->
       <div class="user-avatar-container">
-        <img src="assets/img/icon_person.png" alt="" class="user-avatar">
-            <div class="user-avatar-text">
-                <h3>Dennis</h3>
-                <span>Message</span>
-            </div>
+        <img src="assets/img/icon_person.png" alt="" class="user-avatar" />
+        <div class="user-avatar-text">
+          <h3>{{ contact.name }}</h3>
+          <span>{{ contact.convo[contact.convo.length -1].messageText }}</span>
+        </div>
       </div>
       <span class="time">15:50</span>
     </div>
   </div>
+  
 </div>

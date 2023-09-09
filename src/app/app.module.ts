@@ -19,13 +19,18 @@ import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 
 import { firebaseConfig } from '../environments/environment';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { LoginComponent } from './login/login.component';
+import { GuiComponent } from './gui/gui.component';
+import { provideAuth, getAuth } from '@angular/fire/auth';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    ChatComponent
+    ChatComponent,
+    LoginComponent,
+    GuiComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,9 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
     MatFormFieldModule,
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
     provideFirestore(() => getFirestore()),
-    FormsModule
+    provideAuth(() => getAuth()),
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

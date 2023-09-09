@@ -1,0 +1,13 @@
+.app-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+
+    .sidebar {
+        grid-column: span 4;
+    }
+
+    .chat {
+        grid-column: span 6;
+    }
+}

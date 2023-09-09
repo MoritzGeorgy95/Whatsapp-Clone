@@ -6,16 +6,11 @@ import { UserService } from './user.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'Whatsapp-Clone';
 
   constructor(private userService: UserService) {
 
-  }
-
-
-  ngOnInit() {
-    this.userService.getUserData()
   }
 
   
