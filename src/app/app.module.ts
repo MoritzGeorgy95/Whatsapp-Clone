@@ -15,7 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 
 // Firebase
-import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 
 import { firebaseConfig } from '../environments/environment';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
